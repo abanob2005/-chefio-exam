@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chefio -Recipes App</title>
+  <!-- google fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- font awseme style -->
+  <link rel="stylesheet" href="./css/all.css">
+  <!-- bootstrap style sheet -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <!-- main style sheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- Gradient + Wave background layers -->
+  <div class="gradient-overlay" aria-hidden="true"></div>
+  <div class="wave-bg" aria-hidden="true">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="rgba(106,92,255,1)"></stop>
+          <stop offset="50%" stop-color="rgba(0,234,255,0.85)"></stop>
+          <stop offset="100%" stop-color="rgba(106,92,255,1)"></stop>
+        </linearGradient>
+      </defs>
+      <path fill="url(#g1)"
+        d="M0,128L48,160C96,192,192,256,288,272C384,288,480,256,576,240C672,224,768,224,864,197.3C960,171,1056,117,1152,112C1248,107,1344,149,1392,170.7L1440,192L1440,320L0,320Z">
+      </path>
+    </svg>
+  </div>
+  <!-- Sidebar toggle (floating) -->
+  <button class="toggle-btn" id="openBtn" title="Menu">
+    <i id="barsIcon" class="fa-solid d-block fa-bars"></i>
+    <i id="xIcon" class="fa-solid fa-x d-none"></i>
+  </button>
+
+  <!-- Sidebar panel -->
+  <nav id="sidebar" role="complementary" aria-label="sidebar">
+    <h4>Chefio</h4>
+    <div id="recipesBtn" class="sidebar-item">Recipes</div>
+    <div id="categoryBtn" class="sidebar-item">Category</div>
+    <div id="searchBtn" class="sidebar-item">Search</div>
+    <div id="areaBtn" class="sidebar-item">Area</div>
+    <div id="contactUsBtn" class="sidebar-item">contact-us</div>
+    <div id="ingredientsBtn" class="sidebar-item">Ingredients</div>
+    <hr>
+    <small style="opacity:.8">Primary color</small>
+    <!-- primary colors  -->
+    <div class="color-picks row">
+      <button class="color-swatch" data-color="#6a5cff"
+        style="background:linear-gradient(90deg, #6a5cff, #00eaff)"></button>
+      <button class="color-swatch" data-color="#ff6b6b"
+        style="background:linear-gradient(90deg, #ff6b6b, #ffd86b)"></button>
+      <button class="color-swatch" data-color="#28c76f"
+        style="background:linear-gradient(90deg, #28c76f, #8cf5c9)"></button>
+      <button class="color-swatch" data-color="#f78ca0"
+        style="background:linear-gradient(90deg, #f78ca0, #f97477)"></button>
+      <button class="color-swatch" data-color="#2b5876"
+        style="background:linear-gradient(90deg, #2b5876, #4e4376)"></button>
+      <button class="color-swatch" data-color="#ff7e5f"
+        style="background:linear-gradient(90deg, #ff7e5f, #feb47b)"></button>
+      <button class="color-swatch" data-color="#2193b0"
+        style="background:linear-gradient(90deg, #2193b0, #6dd5ed)"></button>
+      <button class="color-swatch" data-color="#36d1dc"
+        style="background:linear-gradient(90deg, #36d1dc, #5b86e5)"></button>
+      <button class="color-swatch" data-color="#ff9a8b"
+        style="background:linear-gradient(90deg, #ff9a8b, #ff6a88)"></button>
+      <button class="color-swatch" data-color="#6a11cb"
+        style="background:linear-gradient(90deg, #6a11cb, #2575fc)"></button>
+      <button class="color-swatch" data-color="#34e89e"
+        style="background:linear-gradient(90deg, #34e89e, #0f3443)"></button>
+      <button class="color-swatch" data-color="#fca5e6"
+        style="background:linear-gradient(90deg, #fca5e6, #8ec5fc)"></button>
+      <button class="color-swatch" data-color="#8a2be2"
+        style="background:linear-gradient(90deg, #8a2be2, #ff6f61)"></button>
+      <button class="color-swatch" data-color="#ff9a8b"
+        style="background:linear-gradient(90deg, #ff9a8b, #ffd76c)"></button>
+      <button class="color-swatch" data-color="#00c6ff"
+        style="background:linear-gradient(90deg, #00c6ff, #0072ff)"></button>
+      <button class="color-swatch" data-color="#6a5f7d"
+        style="background:linear-gradient(90deg, #6a5f7d, #c25d69)"></button>
+      <button class="color-swatch" data-color="#fcb69f"
+        style="background:linear-gradient(90deg, #fcb69f, #e58e8c)"></button>
+      <button class="color-swatch" data-color="#8360c3"
+        style="background:linear-gradient(90deg, #8360c3, #2ebf91)"></button>
+      <button class="color-swatch" data-color="#0f4b5f"
+        style="background:linear-gradient(90deg, #0f4b5f, #87a7b9)"></button>
+      <button class="color-swatch" data-color="#abafc4"
+        style="background:linear-gradient(90deg, #abafc4, #3c6e71)"></button>
+      <button class="color-swatch" data-color="#ba5370"
+        style="background:linear-gradient(90deg, #ba5370, #f4e2d8)"></button>
+
+    </div>
+  </nav>
+  <!-- header -->
+  <header class="top-area">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between gap-3">
+        <div class="d-flex align-items-center gap-3">
+          <div class="logo">Chefio</div>
+          <div>
+            <div class="title dancing-script">Amazing Food Recipes</div>
+            <div class="sub dancing-script" style="opacity:.8; ">Discover & cook your next favorite meal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- contact section -->
+ <!-- Contact section -->
+<div id="contactContainer" class="contaner contact d-none">
+  <div class="row g-4">
+    <div class="col-md-6">
+      <input id="nameInput" type="text" class="form-control" placeholder="Enter Your Name">
+      <p class="alert alert-danger w-100 mt-2 d-none"> Name must be at least 3 letters and contain letters only</p>
+    </div>
+    <div class="col-md-6">
+      <input id="emailInput" type="email" class="form-control" placeholder="Enter Your Email">
+      <p class="alert alert-danger w-100 mt-2 d-none">Email not valid *exemple@yyy.zzz</p>
+    </div>
+    <div class="col-md-6">
+      <input id="phoneInput" type="text" maxlength="11" class="form-control" placeholder="Enter Your phone Number">
+      <p class="alert alert-danger w-100 mt-2 d-none"> Enter valid Egyptian Phone Number</p>
+    </div>
+    <div class="col-md-6">
+      <input id="ageInput" type="number" class="form-control" placeholder="Enter Your Age">
+      <p class="alert alert-danger w-100 mt-2 d-none"> Enter valid age (18-80)</p>
+    </div>
+    <div class="col-md-6">
+      <input id="passwordInput" type="password" class="form-control" placeholder="Enter Your Password">
+      <p class="alert alert-danger w-100 mt-2 d-none"> Password must have minimum 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special char</p>
+    </div>
+    <div class="col-md-6">
+      <input id="rePasswordInput" type="password" class="form-control" placeholder="Re-enter Password">
+      <p class="alert alert-danger w-100 mt-2 d-none"> Passwords must match</p>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center mt-3">
+    <button id="contactBtn" disabled class="btn btn-danger">Signup</button>
+  </div>
+</div>
+
+
+  <main>
+    <section class="recipes">
+      <div class="container ">
+        <div class="search-box  d-none justify-content-center align-content-center">
+          <input id="searchInput" class="rounded-1 p-2 pe-4 " type="search" placeholder="Search  By Name ">
+          <input id="searchFLInput" class="rounded-1 p-2 pe-4" type="search" maxlength="1"
+            placeholder="Search  By Frist letter">
+        </div>
+        <div class="row g-4 my-3" id="recipeList">
+
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade show d-none" id="detailsModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-body p-4">
+          <div class="row g-3">
+
+            <div class="col-lg-4">
+              <img id="modalImg" src="" alt="recipe image" class="img-fluid rounded-4">
+            </div>
+
+            <div class="col-lg-8">
+              <h3 id="modalTitle"></h3>
+              <p id="modalDesc" style="opacity:.95"></p>
+              <h3>Area : <span id="areaModal"> Saudi Arabian </span></h3>
+              <h3> Category : <span id="categoryModal">Saudi Arabian </span></h3>
+              <div class="mb-4">
+                <h6>Ingredients</h6>
+                <div id="Ingredients">
+                  <hr>
+                </div>
+              </div>
+              <div class="mt-3">
+                <a href="" id="sourceLink" class="btn btn-primary" target="_blank">
+                  <i class="fas fa-link"></i> Source
+                </a>
+                <a href="" id="youtubeLink" class="btn btn-danger" target="_blank">
+                  <i class="fab fa-youtube"></i> YouTube
+                </a>
+              </div>
+              <div class="mt-3">
+                <hr>
+                <button class="btn btn-close-modal" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
