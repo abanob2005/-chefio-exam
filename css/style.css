@@ -242,10 +242,10 @@ body{
 
 /* Modal Content */
 #modalDesc {
-  max-height: none; /* إزالة الحد الأقصى للارتفاع */
-  overflow-y: visible; /* السماح بالتمرير عند الحاجة */
+  max-height: none; 
+  overflow-y: visible; 
   margin-bottom: 20px;
-  height: auto; /* السماح للنص بأن يأخذ المساحة المتاحة */
+  height: auto;
 }
 
 .modal-content {
@@ -255,7 +255,7 @@ body{
   border-radius: 12px;
 }
 #modalImg {
-  width: 100%; /* جعل الصورة تأخذ العرض الكامل */
+  width: 100%; 
   max-height: 300px;
   object-fit: cover;
   border-radius: 8px;
@@ -272,9 +272,9 @@ body{
 
 .ingredients {
   display: flex;
-  flex-wrap: wrap; /* السماح للعناصر بالانتقال إلى السطر التالي عند الحاجة */
-  gap: 5px; /* تحديد المسافة بين العناصر */
-  justify-content: flex-start; /* محاذاة العناصر على اليسار */
+  flex-wrap: wrap;
+  gap: 5px; 
+  justify-content: flex-start; 
   padding: 1px;
 }
 
@@ -337,7 +337,7 @@ body{
 
 /* Background overlay */
 .modal {
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.7); 
   position: fixed;
   inset: 0;
   z-index: 1050;
